@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    --fonte1 : 'Passion One', cursive;
+    --fonte2 : 'Sriracha', cursive;
+    --fonte3 : Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     background-color: darkgrey;
     min-height: 100vh;
+    font-family: var(--fonte3);
 }
 header{
     background-color: black;
@@ -15,6 +22,8 @@ header{
 header h1{
     padding-top: 50px;
     text-transform: uppercase;
+    font-family: var(--fonte1);
+    font-size: 8vw; /* 10% da largura da tela, mas o idela é usar mediaQuery*/
 }
 header p{
     padding-bottom: 50px;
@@ -38,18 +47,38 @@ section{
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte2);
+    font-size: 2.5vw;
 }
+
+section p{
+    padding-bottom: 2em;
+}
+
 
 .imagens{
     background-color: rgb(92, 91, 91);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px black;
+    background-attachment: fixed;
 }
 
 .imagens > p {
-    width: 400px;
+    display: inline-block;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.459);
+    text-shadow: 1px 1px 0px black;
 }
-
+section#img01{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center ;
+    background-size: cover;
+}
+section#img02{
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+    background-size: cover;
+}
 
 footer{
     background-color: black;
